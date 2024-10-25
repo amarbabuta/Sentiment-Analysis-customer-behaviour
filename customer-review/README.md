@@ -124,9 +124,8 @@ ReDoc: `http://127.0.0.1:8000/redoc`
 
 
 ## 🤝 Contributing
-```sh
+
 Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour/issues).
-```
 
 
 ## 📜 License
@@ -138,6 +137,5 @@ This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 ## 📞 Contact
 ```sh
 Your Name - (Amar Babuta) - amarbabuta0707@gmail.com
-Project Link: (https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour)
 ```
-(https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour)
+Project Link: (https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour)

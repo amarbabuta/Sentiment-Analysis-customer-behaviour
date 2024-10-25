@@ -59,14 +59,13 @@ SENTIMENT-ANALYSIS-CUSTOMER-BEHAVIOUR/
 
 
 2. Set up a virtual environment:
-python -m venv venv
-
-source venv/bin/activate  # On Windows use venv\Scripts\activate
+- python -m venv venv
+- source venv/bin/activate  # On Windows use venv\Scripts\activate
 
 
 
 3. Install dependencies:
-pip install -r app/requirements.txt
+- pip install -r app/requirements.txt
 
 
 
@@ -74,8 +73,7 @@ pip install -r app/requirements.txt
 ## 🏃‍♂️ Running the Application
 
 Start the API server:
-
-uvicorn app.main:app --reload
+- uvicorn app.main:app --reload
 
 
 
@@ -93,21 +91,18 @@ The API will be available at `http://127.0.0.1:8000`.
 ## 📊 Model Training and Prediction (Other way)
 
 1. Train the model:
-
-python -m app.src.utils.model_train
+- python -m app.src.utils.model_train
 
 
 2. Make predictions:
-
-python -m app.src.utils.model_predict
+- python -m app.src.utils.model_predict
 
 
 
 ## 🧪 Testing
 
 Run the test suite:
-
-pytest app/tests
+- pytest app/tests
 
 
 
@@ -119,15 +114,15 @@ pytest app/tests
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour/issues).
+- Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour/issues).
 
 ## 📜 License
 
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+- This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
 ## 📞 Contact
 
-Your Name - (Amar Babuta) - amarbabuta0707.com
+- Your Name - (Amar Babuta) - amarbabuta0707@gmail.com
 
-Project Link: [https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour)
+- Project Link: [https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour)
 

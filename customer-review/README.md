@@ -53,9 +53,10 @@ SENTIMENT-ANALYSIS-CUSTOMER-BEHAVIOUR/
 ## 🛠️ Installation
 
 1. Clone the repository:
+```sh
 - git clone https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour.git
 - cd SENTIMENT-ANALYSIS-CUSTOMER-BEHAVIOUR/customer-review
-
+```
 
 
 

@@ -128,11 +128,6 @@ pytest app/tests
 Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour/issues).
 
 
-## 📜 License
-
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
-
-
 
 ## 📞 Contact
 ```sh

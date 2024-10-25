@@ -1,0 +1,384 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Sentiment-Analysis",
+    "version": "0.0.0"
+  },
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "root",
+        "operationId": "root__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Response Root  Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/model_training": {
+      "post": {
+        "summary": "launch_training_service",
+        "operationId": "launch_training_model_training_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrainingInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "this service basically returns the sentiment analysis model training and evaluation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TrainingOutput"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/model_predict": {
+      "post": {
+        "summary": "predict the sentiment",
+        "operationId": "predict_model_predict_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModelPredictInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "this service predicts thesentiment of text whether positive/negative",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModelPredictOutput"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dummy": {
+      "post": {
+        "summary": "launch_dummy_service",
+        "operationId": "launch_dummy_service_dummy_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DummyInputs"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "this dummy service basically returns the inputs posted and a job status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DummyOutputs"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dummy_with_api_interactions_writer": {
+      "post": {
+        "summary": "launch_dummy_service_with_api_interactions_writer",
+        "operationId": "launch_dummy_service_with_api_interactions_writer_dummy_with_api_interactions_writer_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DummyInputs"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "this dummy service basically returns the inputs posted and a job status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DummyOutputs"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CustomerData": {
+        "properties": {
+          "review": {
+            "type": "string",
+            "title": "Review"
+          },
+          "sentiment": {
+            "type": "integer",
+            "title": "Sentiment",
+            "description": "sentiment of review"
+          }
+        },
+        "type": "object",
+        "title": "CustomerData"
+      },
+      "DummyInputs": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "dummy_parameter": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DummyParameterEnum"
+              }
+            ],
+            "description": "dummy_parameter to use to perform job"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "dummy_parameter"
+        ],
+        "title": "DummyInputs"
+      },
+      "DummyOutputs": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "dummy_parameter": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DummyParameterEnum"
+              }
+            ],
+            "description": "dummy_parameter to use to perform job"
+          },
+          "job_status": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/JobStatusEnum"
+              }
+            ],
+            "description": "job_status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "dummy_parameter",
+          "job_status"
+        ],
+        "title": "DummyOutputs"
+      },
+      "DummyParameterEnum": {
+        "type": "string",
+        "enum": [
+          "value_00",
+          "value_01"
+        ],
+        "title": "DummyParameterEnum",
+        "description": "An enumeration."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "JobStatusEnum": {
+        "type": "string",
+        "enum": [
+          "to_run",
+          "launched",
+          "completed",
+          "failed"
+        ],
+        "title": "JobStatusEnum",
+        "description": "An enumeration."
+      },
+      "ModelPredictInput": {
+        "properties": {
+          "review": {
+            "type": "string",
+            "title": "Review"
+          }
+        },
+        "type": "object",
+        "title": "ModelPredictInput"
+      },
+      "ModelPredictOutput": {
+        "properties": {
+          "sentiment": {
+            "type": "string",
+            "title": "Sentiment",
+            "description": "sentiment of review"
+          }
+        },
+        "type": "object",
+        "required": [
+          "sentiment"
+        ],
+        "title": "ModelPredictOutput"
+      },
+      "ReviewsTable": {
+        "properties": {
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/CustomerData"
+            },
+            "type": "array",
+            "title": "Data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "data"
+        ],
+        "title": "ReviewsTable"
+      },
+      "TrainingInput": {
+        "properties": {
+          "reviews_table": {
+            "$ref": "#/components/schemas/ReviewsTable"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reviews_table"
+        ],
+        "title": "TrainingInput"
+      },
+      "TrainingOutput": {
+        "properties": {
+          "accuracy_score": {
+            "type": "number",
+            "title": "Accuracy Score",
+            "description": "Accuracy Score of the model"
+          }
+        },
+        "type": "object",
+        "required": [
+          "accuracy_score"
+        ],
+        "title": "TrainingOutput"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

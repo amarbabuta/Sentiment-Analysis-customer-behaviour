@@ -1,0 +1,13 @@
+{
+  "inputs": {
+    "request_body": {
+      "id": "test_dummy_00",
+      "dummy_parameter": "value_00"
+    }
+  },
+  "expected_outputs": {
+    "id": "test_dummy_00",
+    "dummy_parameter": "value_00",
+    "job_status": "completed"
+  }
+}

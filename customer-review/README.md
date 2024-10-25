@@ -1,6 +1,6 @@
 # Sentiment Analysis for Customer Reviews
 
-![Python](https://img.shields.io/badge/Python-3.7+-blue)
+![Python](https://img.shields.io/badge/Python-3.9+-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-green)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.1.0-red)
 

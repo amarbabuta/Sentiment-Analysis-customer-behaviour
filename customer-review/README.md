@@ -117,10 +117,10 @@ pytest app/tests
 
 
 ## 📚 Documentation
-```sh
-Swagger UI: `http://127.0.0.1:8000/docs`
-ReDoc: `http://127.0.0.1:8000/redoc`
-```
+
+- Swagger UI: (http://127.0.0.1:8000/docs)
+- ReDoc: (http://127.0.0.1:8000/redoc)
+
 
 
 ## 🤝 Contributing
@@ -129,9 +129,9 @@ Contributions, issues, and feature requests are welcome! Feel free to check [iss
 
 
 ## 📜 License
-```sh
+
 This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
-```
+
 
 
 ## 📞 Contact

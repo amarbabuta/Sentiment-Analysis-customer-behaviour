@@ -54,77 +54,89 @@ SENTIMENT-ANALYSIS-CUSTOMER-BEHAVIOUR/
 
 1. Clone the repository:
 ```sh
-- git clone https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour.git
-- cd SENTIMENT-ANALYSIS-CUSTOMER-BEHAVIOUR/customer-review
+git clone https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour.git
+cd SENTIMENT-ANALYSIS-CUSTOMER-BEHAVIOUR/customer-review
 ```
 
 
 
 2. Set up a virtual environment:
-- python -m venv venv
-- source venv/bin/activate  # On Windows use venv\Scripts\activate
-
+```sh
+python -m venv venv
+source venv/bin/activate  # On Windows use venv\Scripts\activate
+```
 
 
 3. Install dependencies:
-- pip install -r app/requirements.txt
-
+```sh
+pip install -r app/requirements.txt
+```
 
 
 
 ## 🏃‍♂️ Running the Application
 
 Start the API server:
-- uvicorn app.main:app --reload
-
+```sh
+uvicorn app.main:app --reload
+```
 
 
 
 The API will be available at `http://127.0.0.1:8000`.
 
 ## 🔍 API Endpoints
+```sh
+`GET /`: Welcome message
+`POST /model_training`: Train the sentiment analysis model
+`POST /model_predict`: Predict sentiment for a given text
+`POST /dummy`: Test endpoint (returns input with a job status)
+`POST /dummy_with_api_interactions_writer`: Test endpoint with API interaction logging
+```
 
-- `GET /`: Welcome message
-- `POST /model_training`: Train the sentiment analysis model
-- `POST /model_predict`: Predict sentiment for a given text
-- `POST /dummy`: Test endpoint (returns input with a job status)
-- `POST /dummy_with_api_interactions_writer`: Test endpoint with API interaction logging
 
 ## 📊 Model Training and Prediction (Other way)
 
 1. Train the model:
-- python -m app.src.utils.model_train
+```sh
+python -m app.src.utils.model_train
+```
 
-
-2. Make predictions:
-- python -m app.src.utils.model_predict
-
+4. Make predictions:
+```sh
+python -m app.src.utils.model_predict
+```
 
 
 ## 🧪 Testing
 
 Run the test suite:
-- pytest app/tests
-
-
+```sh
+pytest app/tests
+```
 
 
 ## 📚 Documentation
+```sh
+Swagger UI: `http://127.0.0.1:8000/docs`
+ReDoc: `http://127.0.0.1:8000/redoc`
+```
 
-- Swagger UI: `http://127.0.0.1:8000/docs`
-- ReDoc: `http://127.0.0.1:8000/redoc`
 
 ## 🤝 Contributing
+```sh
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour/issues).
+```
 
-- Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour/issues).
 
 ## 📜 License
+```sh
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
+```
 
-- This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
 ## 📞 Contact
-
-- Your Name - (Amar Babuta) - amarbabuta0707@gmail.com
-
-- Project Link: [https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour)
-
+```sh
+Your Name - (Amar Babuta) - amarbabuta0707@gmail.com
+Project Link: [https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour)
+```

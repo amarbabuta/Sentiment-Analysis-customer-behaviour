@@ -138,5 +138,5 @@ This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 ## 📞 Contact
 ```sh
 Your Name - (Amar Babuta) - amarbabuta0707@gmail.com
-Project Link: [https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour](https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour)
+Project Link: (https://github.com/amarbabuta/Sentiment-Analysis-customer-behaviour)
 ```

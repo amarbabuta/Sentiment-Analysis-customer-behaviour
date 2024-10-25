@@ -15,8 +15,9 @@ A powerful sentiment analysis tool for customer reviews, built with FastAPI and 
 - 🧪 Comprehensive testing suite
 
 ## 📁 Project Structure
+```sh
 SENTIMENT-ANALYSIS-CUSTOMER-BEHAVIOUR/
-- └── customer-review/
+└── customer-review/
     └── app/
         ├── config/
         │   ├── default.env
@@ -46,7 +47,7 @@ SENTIMENT-ANALYSIS-CUSTOMER-BEHAVIOUR/
         ├── main.py
         └── requirements.txt
     └── README.md
-
+```
 
 
 ## 🛠️ Installation

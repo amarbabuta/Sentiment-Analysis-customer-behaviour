@@ -99,12 +99,12 @@ The API will be available at `http://127.0.0.1:8000`.
 
 1. Train the model:
 ```sh
-python -m app.src.utils.model_train
+python -m app.tests.app_services.test_train
 ```
 
 4. Make predictions:
 ```sh
-python -m app.src.utils.model_predict
+python -m app.tests.app_services.test_predict
 ```
 
 

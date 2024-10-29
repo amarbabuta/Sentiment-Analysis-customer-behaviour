@@ -33,17 +33,37 @@ SENTIMENT-ANALYSIS-CUSTOMER-BEHAVIOUR/
         ├── src/
         │   └── utils/
         │       ├── api_clients/
+        │           ├── gcp_services_client.py
+        │           └── generic_api_client.py
         │       ├── data_io_services/
-        │       ├── monitoring/
-        │       ├── config.py
-        │       ├── datamodels.py
-        │       ├── model_predict.py
-        │       ├── model_train.py
-        │       └── training_local.py
+        │           └── cloud_storage.py
+        │       └── monitoring/
+        │           └── api_interactions_writer.py
+        │   ├── config.py
+        │   ├── datamodels.py
+        │   ├── model_predict.py
+        │   ├── model_train.py
+        │   └── training_local.py
         ├── tests/
         │   ├── app_services/
-        │   ├── data/
+        │       ├── data/
+        │           ├── dummy/
+        │               └── test_dummy_00.json
+        │           ├── predict/
+        │               └── test_predict_00.json
+        │           ├── root/
+        │               └── test_root_00.json
+        │           └── train/
+        │               ├── predicted_value.json
+        │               └── reviews_data.json
+        │       ├── test_dummy.py
+        │       ├── test_predict.py
+        │       ├── test_root.py
+        │       └── test_train.py
         │   └── helpers/
+        │       ├── api_services_checkers.py
+        │       ├── case_handlers.py
+        │       └── test_case_handlers.py
         ├── main.py
         └── requirements.txt
     └── README.md
